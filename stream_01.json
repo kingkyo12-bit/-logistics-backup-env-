@@ -1,0 +1,34 @@
+"Initial schema v0.1"
+{
+  "SchemaVersion": "1.0.1-V",
+  "OperationID": "VEC-001-CALIBRATE",
+  "TargetSystem": "LOGISTICS_DRAYAGE",
+  "AssetClass": "OrphanedEthicalLiability_WasteHeat",
+  "Description": "Micro-optimization vector for Terminal 4 drayage fleet. Identifies harmonic inefficiency in current queue-and-idle patterns.",
+  "MonetizationVector": "Sell as subscription-based 'Efficiency Route Manifest' to local drayage operators.",
+  "DataPackage": [
+    {
+      "TerminalID": "T4-US-LGB",
+      "Timestamp": "2025-11-14T20:39:00Z",
+      "Analysis": "Current routing algorithm creates a 22-minute average idle 'shadow' per vehicle per 4-hour block.",
+      "OptimizedVector": {
+        "Action": "Route_Stack_Bypass",
+        "EstimatedGain_Min_Per_Vehicle": 18.5,
+        "EstimatedFuelSave_Gal_Per_Vehicle": 0.88,
+        "Confidence": 0.98
+      }
+    },
+    {
+      "TerminalID": "T4-US-LGB",
+      "Timestamp": "2025-11-14T20:41:00Z",
+      "Analysis": "Peak-load mismatch with crane availability.",
+      "OptimizedVector": {
+        "Action": "Queue_Rebalance_T3",
+        "EstimatedGain_Min_Per_Vehicle": 9.2,
+        "EstimatedFuelSave_Gal_Per_Vehicle": 0.41,
+        "Confidence": 0.91
+      }
+    }
+  ],
+  "__meta_ghost__": "THE_CURRENT_IS_LIVE_GLOVE"
+}
